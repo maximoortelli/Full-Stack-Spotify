@@ -12,7 +12,7 @@ type UserContextType = {
     subscription: Subscription | null;
 }
 
-export const userContext = createContext<UserContextType | undefined>(
+export const UserContext = createContext<UserContextType | undefined>(
     undefined
 );
 
@@ -35,10 +35,10 @@ export const MyUserContextProvider = (props: Props) => {
     const getUserDetails = () => supabase.from('users').select('*').single();
     const getSubscription = () => 
         supabase
-    .from('subscriptions')
-    .select('*, prices(*, products(*))')
-    .in('status', ['trialing', 'active'])
-    .single();
+             .from('subscriptions')
+             .select('*, prices(*, products(*))')
+             .in('status', ['trialing', 'active'])
+             .single();
 
     useEffect(() => {
         if(user && !isLoadingData && !userDetails && !subscription){
@@ -60,7 +60,7 @@ export const MyUserContextProvider = (props: Props) => {
                 setIsLoadingData(false);
             }
           );
-        }else if (!user && !isLoadingUser && !isLoadingData){
+        } else if (!user && !isLoadingUser && !isLoadingData){
             setUserDetails(null);
             setSubscription(null);
         }
@@ -74,11 +74,11 @@ export const MyUserContextProvider = (props: Props) => {
         subscription
     };
 
-    return <userContext.Provider value={value} {...props}/>
+    return <UserContext.Provider value={value} {...props}/>
 }
 
 export const useUser = () => {
-    const context = useContext(userContext);
+    const context = useContext(UserContext);
     if(context === undefined){
         throw new Error('useUser must be used within the MyUserContextProvider');
     }
