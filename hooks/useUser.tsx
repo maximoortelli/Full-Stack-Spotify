@@ -1,3 +1,4 @@
+/* eslint-disable react-hooks/exhaustive-deps */
 import React, { use, useContext, useEffect, useState } from 'react'
 import { User } from '@supabase/auth-helpers-nextjs'
 import { useSessionContext, useUser as useSupaUser} from '@supabase/auth-helpers-react';
