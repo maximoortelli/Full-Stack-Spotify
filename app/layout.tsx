@@ -5,6 +5,8 @@ import Sidebar from "@/components/Sidebar";
 import "./globals.css";
 import SupabaseProvider from "@/providers/SupabaseProvider";
 import UserProvider from "@/providers/UserProvider";
+import ModalProvider from "@/providers/ModalProvider";
+import ToasterProvider from "@/providers/ToasterProvider";
 
 const font = Figtree({ subsets: ["latin"] });
 
@@ -24,13 +26,15 @@ export default function RootLayout({
          <link rel="icon" type="/images/spotify.png" sizes="32x32" href="/images/spotify.png" />
       </head>
       <body className={font.className}>
-      <SupabaseProvider>
-        <UserProvider>
-          <Sidebar>
-             {children}
-          </Sidebar>
-        </UserProvider>
-      </SupabaseProvider>
+        <ToasterProvider />
+         <SupabaseProvider>
+           <UserProvider>
+             <ModalProvider />
+             <Sidebar>
+                {children}
+             </Sidebar>
+           </UserProvider>
+         </SupabaseProvider>
       </body>
     </html>
   );
