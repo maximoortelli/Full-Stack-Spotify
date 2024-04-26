@@ -3,6 +3,7 @@
 import { useSessionContext, useSupabaseClient } from "@supabase/auth-helpers-react";
 import { useRouter } from "next/navigation";
 import { Auth } from "@supabase/auth-ui-react";
+import toast from "react-hot-toast";
 import { ThemeSupa } from "@supabase/auth-ui-shared";
 import { useEffect } from "react";
 
@@ -18,6 +19,7 @@ const AuthModal = () => {
     useEffect(() =>{
         if(session){
             router.refresh();
+            toast.success('Inicio de sesion');
             onClose();
         }
     }, [session, router, onClose])
