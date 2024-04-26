@@ -19,7 +19,7 @@ export interface UserDetails {
     payment_method?: Stripe.PaymentMethod[Stripe.PaymentMethod.Type];
 };
 
-export interface Products {
+export interface Product {
     id: string;
     active?: boolean;
     name?: string;
@@ -40,7 +40,7 @@ export interface Price {
     interval_count?: number;
     trial_period_days?: number | null;
     metadata?: Stripe.Metadata;
-    products?: Products;
+    products?: Product;
 }
 
 export interface Subscription {
