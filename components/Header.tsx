@@ -32,6 +32,7 @@ const Header: React.FC<HeaderProps> = ({
   const handleLogout = async () => {
      const { error } = await supabaseClient.auth.signOut();
     // Reset any playing songs.
+    player.reset();
      router.refresh();
      if(error){
       toast.error(error.message);
