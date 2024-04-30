@@ -110,8 +110,8 @@ const PlayerContent: React.FC<PlayerContentProps> = ({
              <div
                 onClick={handlePlay} 
                 className="
-                 h-10
-                 w-10
+                 h-8
+                 w-8
                  flex
                  items-center
                  justify-center

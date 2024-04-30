@@ -2,6 +2,8 @@
 import { usePathname } from "next/navigation";
 import { Children, useMemo } from "react";
 import { BiSearch } from "react-icons/bi";
+import { FaSpotify } from "react-icons/fa";
+import { IoMdHeart } from "react-icons/io";
 import { HiHome } from "react-icons/hi";
 import Box from "./Box";
 import SidebarItem from "./SidebarItem";
@@ -23,6 +25,12 @@ const Sidebar: React.FC<SidebarProps> = ({
     const player = usePlayer();
     const routes = useMemo(() => [
         {
+            icon: FaSpotify,
+            label: "Spotify",
+            active: pathname !== '/',
+            href: '/',
+       },
+        {
              icon: HiHome,
              label: "Home",
              active: pathname !== '/search',
@@ -33,7 +41,13 @@ const Sidebar: React.FC<SidebarProps> = ({
              label: 'Search',
              active: pathname === '/search',
              href: '/search',
-        }
+        },
+        {
+            icon: IoMdHeart,
+            label: 'Liked Songs',
+            active: pathname === '/liked',
+            href: '/liked',
+       }
     ], [pathname]);
 
     return ( 
@@ -43,7 +57,8 @@ const Sidebar: React.FC<SidebarProps> = ({
             `,
              player.activeId && 'h-[calc(100% - 80px)]'
                 )}>
-             <div className="hidden md:flex flex-col gap-y-2 bg-black h-full w-[300px] p-2">
+             <div className="hidden md:flex flex-col bg-black h-full w-[300px] p-2">
+
                 <Box>
                     <div className="flex flex-col gap-y-4 px-5 py-4">
                         {routes.map((item) => (
