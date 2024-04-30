@@ -6,9 +6,8 @@ import {stripe} from "@/libs/stripe";
 import { getURL } from "@/libs/helpers";
 import { createOrRetrieveCustomer } from "@/libs/supabaseAdmin";
 
-export async function POST(
-    request: Request
-)    {
+export async function POST(request: Request) {
+    
     const { price, quantity = 1, metadata = {}} = await request.json();
 
     try {
@@ -16,13 +15,15 @@ export async function POST(
             cookies,
         });
 
-        const { data: { user }} = await supabase.auth.getUser();
+        
+        const { data: { user } } = await supabase.auth.getUser();
 
         const customer = await createOrRetrieveCustomer({
             uuid: user?.id || '',
             email: user?.email || ''
         });
 
+        //@ts-ignore
         const session = await stripe.checkout.sessions.create({
             payment_method_types: ["card"],
             billing_address_collection: 'required',
@@ -36,7 +37,7 @@ export async function POST(
             mode: 'subscription',
             allow_promotion_codes: true,
             subscription_data: {
-                // trial_from_plan: true,
+                trial_from_plan: true,
                 metadata
             },
             success_url: `${getURL()}/account`,
