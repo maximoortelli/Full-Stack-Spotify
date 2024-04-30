@@ -2,8 +2,8 @@ import { Price } from "@/types";
 
 export const getURL = () => {
     let url = 
-    process.env.NEXT_PUBLIC_SITE_URL ??
-    process.env.NEXT_PUBLIC_VERCEL_URL ??
+    process?.env?.NEXT_PUBLIC_SITE_URL ??
+    process?.env?.NEXT_PUBLIC_VERCEL_URL ??
     'http://localhost:3000/';
 
     url = url.includes('http') ? url : `https://${url}`;
@@ -17,21 +17,21 @@ export const postData = async ({
     data
 }: {
     url: string;
-    data?: {price: Price}
+    data?: { price: Price }
 }) => {
     console.log('POST REQUEST:', url, data);
 
     const res: Response = await fetch(url, {
-        method: 'POST ',
+        method: 'POST',
         headers: new Headers({'Content-Type': 'application/json'}),
         credentials: 'same-origin',
         body: JSON.stringify(data)
     });
 
     if(!res.ok){
-        console.log('Error in Post', { url, data, res});
+        console.log('Error in postData', { url, data, res});
 
-        throw new Error(res.statusText);
+        throw Error(res.statusText);
     }
 
     return res.json();

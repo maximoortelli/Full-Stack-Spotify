@@ -50,7 +50,7 @@ export async function POST(
                     break;
                 case 'customer.subscription.created':
                 case 'customer.subscription.updated':
-                case  'customer.subscription.deleted':
+                case 'customer.subscription.deleted':
                     const subscription = event.data.object as Stripe.Subscription;
                     await manageSubscriptionStatusChange(
                         subscription.id,

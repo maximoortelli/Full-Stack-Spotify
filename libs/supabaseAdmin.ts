@@ -1,5 +1,5 @@
-import Stripe from "stripe";
-import { createClient } from "@supabase/supabase-js";
+import Stripe from 'stripe';
+import { createClient } from '@supabase/supabase-js';
 
 import { Database } from "@/types_db";
 import { Price, Product } from "@/types";
@@ -24,10 +24,7 @@ const upsertProductRecord = async (product: Stripe.Product) => {
 
     const { error } = await supabaseAdmin.from('products').upsert([productData]);
 
-    if(error) {
-        throw error;
-    }
-
+    if(error) throw error;
     console.log(`Product inserted/updated: ${product.id}`);
 };
 
@@ -149,10 +146,6 @@ const manageSubscriptionStatusChange = async (
         cancel_at: subscription.cancel_at ? toDateTime(subscription.cancel_at).toISOString() : null,
         canceled_at: subscription.canceled_at ? toDateTime(subscription.canceled_at).toISOString() : null,
         current_period_start: toDateTime(subscription.current_period_start).toISOString(),
-/* ---------------------------------------------- */
-/* Hasta aca la quede LINEA 154 supabaseAdmin.ts*/
-/* ---------------------------------------------- */
-
         current_period_end: toDateTime(subscription.current_period_end).toISOString(),
         created: toDateTime(subscription.created).toISOString(),
         ended_at: subscription.ended_at ? toDateTime(subscription.ended_at).toISOString() : null,
