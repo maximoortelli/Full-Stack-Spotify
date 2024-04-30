@@ -9,3 +9,16 @@ body,
   background-color: black;
   color-scheme: dark;
 }
+
+::-webkit-scrollbar {
+  width: 8px; /* Ancho de la barra */
+}
+
+::-webkit-scrollbar-track {
+  background: #000000; /* Color de fondo de la pista */
+}
+
+::-webkit-scrollbar-thumb {
+  background: #323332; /* Color del 'thumb' (el deslizador) */
+  border-radius: 20px; 
+}
