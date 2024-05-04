@@ -88,9 +88,13 @@
 <div>
     <h2>Database</h2>
     <ul>
-      <li>
+     <li>
          <img src="https://skillicons.dev/icons?i=postgresql"/>
          <a href="https://www.postgresql.org/">PostgreSQL</a>
+     </li>
+     <li>
+         <img src="https://skillicons.dev/icons?i=supabase"/>
+         <a href="https://supabase.com/">Supabase</a>
      </li>
     </ul>
 </div>
