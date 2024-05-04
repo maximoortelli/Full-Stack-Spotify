@@ -36,7 +36,7 @@
 
 <a name="deployment"></a>
 
-<a href="https://full-stack-rental.vercel.app/" target="_blank">Click here to see the deployment</a>
+<a href="https://full-stack-spotify-zeta.vercel.app/" target="_blank">CLICK HERE TO SEE THE DEPLOYMENT</a>
 
 # 🛠 Built With 
 
@@ -89,13 +89,9 @@
     <h2>Database</h2>
     <ul>
       <li>
-         <img src="https://skillicons.dev/icons?i=mongodb"/>
-         <a href="https://www.mongodb.com/es">MongoDB</a>
+         <img src="https://skillicons.dev/icons?i=postgresql"/>
+         <a href="https://www.postgresql.org/">PostgreSQL</a>
      </li>
-      <li>  
-          <img src="https://skillicons.dev/icons?i=express"/>  
-          <a href="https://expressjs.com/es/">Express</a>
-      </li>
     </ul>
 </div>
 
