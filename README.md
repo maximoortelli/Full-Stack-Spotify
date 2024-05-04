@@ -36,7 +36,7 @@
 
 <a name="deployment"></a>
 
-[CLICK HERE TO SEE THE DEPLOYMENT](https://full-stack-spotify-zeta.vercel.app/){:target="_blank"}
+[CLICK HERE TO SEE THE DEPLOYMENT](https://full-stack-spotify-zeta.vercel.app/)
 
 # 🛠 Built With 
 
