@@ -30,7 +30,7 @@
 
 # 🔊🎧 Full Stack Spotify <a name="full-stack-spotify"></a>
 
-> In this new project I have made a site to reserve or rent houses or apartments identical to Airbnb, taking advantage of key technologies such as JavaScript, TypeScript, React, Node Next.js, NextAuth, Tailwind.css, MongoDB and Express.
+> In this new project develop a Full stack Spotify application that allows you to authenticate users, upload songs with images, play them and like to add them to favorites. I have used key technologies such as: React.js, Next.js, TypeScript.js, JavaScript, PostgreSQL and Supabase.
 
 # 💻✅ Deployment 
 
