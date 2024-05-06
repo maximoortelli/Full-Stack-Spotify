@@ -161,6 +161,7 @@ You can check out [the Next.js GitHub repository](https://github.com/vercel/next
 - [x] The functionality has been added so that the user can like to the songs and they will be saved in the favorites section.
 - [x] The functionality has been added so that the user can upload their song, with their author name, their song title and their cover image.
 - [x] It has the function of registering and logging in.
+- [x] PostgreSQL database connected successfully.
 
 <p align="right">(<a href="#readme-top">back to top</a>)</p>
 
