@@ -129,12 +129,6 @@ To learn more about Next.js, take a look at the following resources:
 
 You can check out [the Next.js GitHub repository](https://github.com/vercel/next.js/) - your feedback and contributions are welcome!
 
-## Deploy on Vercel
-
-The easiest way to deploy your Next.js app is to use the [Vercel Platform](https://vercel.com/new?utm_medium=default-template&filter=next.js&utm_source=create-next-app&utm_campaign=create-next-app-readme) from the creators of Next.js.
-
-Check out our [Next.js deployment documentation](https://nextjs.org/docs/deployment) for more details.
-
 # Kanban board <a name="kanban-board"></a>
  - [Kanban board Project link](https://github.com/users/maximoortelli/projects/15)
 
@@ -158,28 +152,15 @@ Check out our [Next.js deployment documentation](https://nextjs.org/docs/deploym
 - [x] Tailwind animations and effects
 - [x] Full responsiveness
 - [x] Credential authentication
-- [x] Google authentication
 - [x] Github authentication
-- [x] Image upload using Cloudinary CDN
 - [x] Client form validation and handling using react-hook-form
 - [x] Server error handling using react-toast
-- [x] Calendars with react-date-range
-- [x] Page loading state
-- [x] Page empty state
-- [x] Booking / Reservation system
-- [x] Guest reservation cancellation
-- [x] Owner reservation cancellation
-- [x] Creation and deletion of properties
-- [x] Pricing calculation
-- [x] Advanced search algorithm by category, date range, map location, number of guests, rooms and bathrooms
-    - For example we will filter out properties that have a reservation in your desired date range to travel
-- [x] Favorites system
-- [x] Shareable URL filters
-    - Lets say you select a category, location and date range, you will be able to share URL with a logged out friend in another browser and they will see the same results
-- [x] How to write POST and DELETE routes in route handlers (app/api)
-- [x] How to fetch data in server react components by directly accessing database (WITHOUT API! like Magic!)
-- [x] How to handle files like error.tsx and loading.tsx which are new Next 13 templating files to unify loading and error handling
-- [x] How to handle relations between Server and Child components!
+- [x] Fetch data in server react components by directly accessing database.
+- [x] Handle files like error.tsx and loading.tsx which are new Next 13 templating files to unify loading and error handling
+- [x] Handle relations between Server and Child components!
+- [x] The functionality has been added so that the user can like to the songs and they will be saved in the favorites section.
+- [x] The functionality has been added so that the user can upload their song, with their author name, their song title and their cover image.
+- [x] It has the function of registering and logging in.
 
 <p align="right">(<a href="#readme-top">back to top</a>)</p>
 
